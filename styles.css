@@ -56,8 +56,9 @@ img {
 
 .race-section {
   display: flex;
-  align-items: center;
-  margin: 40px;
+  align-items: flex-start;
+  max-width: 1000px;   /* set a maximum width */
+  margin: 40px auto;
 }
 
 .race-section img {
@@ -68,4 +69,8 @@ img {
 
 .race-text {
   flex: 1;              /* make text take up remaining space */
+}
+
+.race-section.right {
+  justify-content: flex-end; /* push everything to the right */
 }
