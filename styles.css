@@ -53,3 +53,19 @@ img {
 .left{
   text-align:left;
 }
+
+.race-section {
+  display: flex;
+  align-items: flex-start;
+  margin: 40px;
+}
+
+.race-section img {
+  max-width:400 px;     /* shrink image to reasonable size */
+  margin: 0 20px;       /* spacing around the image */
+  border-radius: 10px;  /* optional rounded corners */
+}
+
+.race-text {
+  flex: 1;              /* make text take up remaining space */
+}
