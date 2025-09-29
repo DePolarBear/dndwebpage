@@ -43,5 +43,13 @@ img {
 }
 
 .center {
-  text-align:center;   /* centers every inline element inside */
+  text-align:center;
+}
+
+.right{
+  text-align:right;
+}
+
+.left{
+  text-align:left;
 }
