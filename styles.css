@@ -41,3 +41,7 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+center {
+  text-align: center;   /* centers every inline element inside */
+}
