@@ -42,6 +42,6 @@ img {
   height: auto;
 }
 
-center {
-  text-align: center;   /* centers every inline element inside */
+.center {
+  text-align:center;   /* centers every inline element inside */
 }
