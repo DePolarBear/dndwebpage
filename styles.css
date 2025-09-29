@@ -56,8 +56,8 @@ img {
 
 .race-section {
   display: flex;
-  align-items: flex-start;
-  margin: 150px;
+  align-items: center;
+  margin: 40px;
 }
 
 .race-section img {
