@@ -12,11 +12,20 @@ body {
 .content {
   max-width: 1000px;
   margin: auto;
-  background: white;   /* keeps middle readable */
   padding: 20px;
-  border-radius: 10px; /* soft corners */
-  box-shadow: 0 0 10px rgba(0,0,0,0.2); /* subtle shadow */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+  /* White center fading to transparent sides */
+  background: linear-gradient(
+    to right,
+    rgba(255,255,255,1) 0%,
+    rgba(255,255,255,0.9) 15%,
+    rgba(255,255,255,0.9) 85%,
+    rgba(255,255,255,1) 100%
+  );
 }
+
 
 header {
   background-color: #6200A6;
