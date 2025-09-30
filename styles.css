@@ -1,6 +1,6 @@
 /* Farby a štýly pre celú stránku */
 body {
-  background: img("images/dnd-bg.png") no-repeat center top;
+  background:img("images/background.jpg") no-repeat center top;
   background-size: cover;
   background-attachment: fixed;
   font-family: Arial, sans-serif;
