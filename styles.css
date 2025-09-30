@@ -1,10 +1,20 @@
 /* Farby a štýly pre celú stránku */
 body {
+  background: url("images/dnd-bg.png") no-repeat center top;
+  background-size: cover;
+  background-attachment: fixed;
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   color: #333;
   margin: 0;
   padding: 0;
+}
+
+.content {
+  max-width: 1000px;
+  margin: auto;
+  background: white;   /* keeps middle readable */
+  padding: 20px;
 }
 
 header {
