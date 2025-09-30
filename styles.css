@@ -78,15 +78,17 @@ img {
 .race-section {
   display: flex;
   align-items: flex-start;
+  gap: 30px;
   max-width: 1000px;   /* set a maximum width */
   margin: 40px auto;
 }
 
 .race-section img {
-  align-items: flex-start;
+  object-fit: cover;
   max-width: 400px;     /* corrected px spacing */
   margin: 0 20px;       /* spacing around the image */
   border-radius: 10px;  /* rounded corners */
+  flex-shrink: 0;
 }
 
 .race-text {
