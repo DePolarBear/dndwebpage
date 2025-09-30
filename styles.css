@@ -75,6 +75,3 @@ img {
   justify-content: flex-end; /* push everything to the right */
 }
 
-.rounded img {
-  border-radius: 10px;
-}
