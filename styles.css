@@ -1,10 +1,9 @@
 /* Farby a štýly pre celú stránku */
 body {
-  background:img("images/background.jpg") no-repeat center top;
+  background: url("images/background.jpg") no-repeat center top;
   background-size: cover;
   background-attachment: fixed;
   font-family: Arial, sans-serif;
-  /*background-color: #f4f4f4;*/
   color: #333;
   margin: 0;
   padding: 0;
@@ -15,6 +14,8 @@ body {
   margin: auto;
   background: white;   /* keeps middle readable */
   padding: 20px;
+  border-radius: 10px; /* soft corners */
+  box-shadow: 0 0 10px rgba(0,0,0,0.2); /* subtle shadow */
 }
 
 header {
@@ -50,17 +51,18 @@ main {
 img {
   max-width: 100%;
   height: auto;
+  border-radius: 10px; /* default rounded images */
 }
 
 .center {
   text-align:center;
 }
 
-.right{
+.right {
   text-align:right;
 }
 
-.left{
+.left {
   text-align:left;
 }
 
@@ -72,9 +74,9 @@ img {
 }
 
 .race-section img {
-  max-width:400 px;     /* shrink image to reasonable size */
+  max-width: 400px;     /* corrected px spacing */
   margin: 0 20px;       /* spacing around the image */
-  border-radius: 10px;  /* optional rounded corners */
+  border-radius: 10px;  /* rounded corners */
 }
 
 .race-text {
@@ -84,4 +86,3 @@ img {
 .race-section.right {
   justify-content: flex-end; /* push everything to the right */
 }
-
