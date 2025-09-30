@@ -77,7 +77,7 @@ img {
 
 .race-section {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 30px;
   max-width: 1000px;   /* set a maximum width */
   margin: 40px auto;
