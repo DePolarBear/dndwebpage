@@ -99,7 +99,7 @@ img {
   justify-content: flex-end; /* push everything to the right */
 }
 
-table, th, td {
+th, td {
   border: 1px solid black;
   border-radius: 10px;
 }
