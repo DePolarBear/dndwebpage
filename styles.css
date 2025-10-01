@@ -104,7 +104,23 @@ th, td {
   border-radius: 10px;
 }
 
-}
-.gallery{
-    padding: 4% 8%;
-}
+.footer {
+    width: 100%;
+    padding: 40px 0;
+    background: rgb(245, 234, 220) url("images/background.png");
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+  }
+
+  .footer a {
+    color: #000;
+    font-size: 30px;
+    text-decoration: none;
+    transition: transform .2s;
+  }
+  .footer a:hover {
+    transform: scale(1.15);
+  }
