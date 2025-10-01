@@ -107,7 +107,6 @@ th, td {
 .footer {
     width: 100%;
     padding: 40px 0;
-    background: rgb(245, 234, 220) url("images/background.png");
     text-align: center;
     display: flex;
     justify-content: center;
