@@ -111,7 +111,6 @@ th, td {
     rgba(255,255,255,0.9) 15%,
     rgba(255,255,255,0.9) 85%,
     rgba(255,255,255,1) 100%);
-    border-radius: 20px;
     width: 100%;
     padding: 40px 0;
     text-align: center;
@@ -119,6 +118,7 @@ th, td {
     justify-content: center;
     gap: 28px;
     flex-wrap: wrap;
+    border-radius: 20px;
   }
 
   .footer a {
@@ -126,6 +126,7 @@ th, td {
     font-size: 30px;
     text-decoration: none;
     transition: transform .2s;
+    border-radius: 20px;
   }
   .footer a:hover {
     transform: scale(1.15);
