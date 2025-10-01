@@ -103,3 +103,42 @@ th, td {
   border: 1px solid black;
   border-radius: 10px;
 }
+
+.footer{
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 30px;
+    text-align: center;
+    background: rgb(245, 234, 220);
+    background-image: url(images/background.png);
+}
+
+.fa {
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fa-facebook {
+    background: rgb(245, 234, 220);
+    color: black;
+
+}
+  
+.fa-youtube-play {
+    background: rgb(245, 234, 220);
+    color: black;
+}
+  
+.fa-instagram {
+    background: rgb(245, 234, 220);
+    color: black;
+}
+.fa-envelope {
+    background: rgb(245, 234, 220);
+    color: black;
+}
+.gallery{
+    padding: 4% 8%;
+}
