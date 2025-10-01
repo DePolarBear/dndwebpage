@@ -110,8 +110,7 @@ th, td {
     padding-bottom: 40px;
     font-size: 30px;
     text-align: center;
-    background: rgb(245, 234, 220);
-    background-image: url(images/background.png);
+    background: rgb(255,255,255);
 }
 
 .fa {
