@@ -105,6 +105,12 @@ th, td {
 }
 
 .footer {
+    background: linear-gradient(
+    to right,
+    rgba(255,255,255,1) 0%,
+    rgba(255,255,255,0.9) 15%,
+    rgba(255,255,255,0.9) 85%,
+    rgba(255,255,255,1) 100%);
     width: 100%;
     padding: 40px 0;
     text-align: center;
@@ -115,7 +121,7 @@ th, td {
   }
 
   .footer a {
-    color: #000;
+    color: #333;
     font-size: 30px;
     text-decoration: none;
     transition: transform .2s;
