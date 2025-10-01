@@ -98,3 +98,8 @@ img {
 .race-section.right {
   justify-content: flex-end; /* push everything to the right */
 }
+
+table, th, td {
+  border: 1px solid black;
+  border-radius: 10px;
+}
