@@ -105,29 +105,28 @@ th, td {
 }
 
 .footer {
-    background: linear-gradient(
-    to right,
-    rgba(255,255,255,1) 0%,
-    rgba(255,255,255,0.9) 15%,
-    rgba(255,255,255,0.9) 85%,
-    rgba(255,255,255,1) 100%);
-    width: 100%;
-    padding: 40px 0;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    gap: 28px;
-    flex-wrap: wrap;
-    border-radius: 20px;
-  }
+  border-radius: 20px;
+  background: linear-gradient(
+  to right,
+  rgba(255,255,255,1) 0%,
+  rgba(255,255,255,0.9) 15%,
+  rgba(255,255,255,0.9) 85%,
+  rgba(255,255,255,1) 100%);
+  width: 100%;
+  padding: 40px 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
 
-  .footer a {
-    color: #333;
-    font-size: 30px;
-    text-decoration: none;
-    transition: transform .2s;
-    border-radius: 20px;
-  }
-  .footer a:hover {
-    transform: scale(1.15);
-  }
+.footer a {
+  color: #333;
+  font-size: 30px;
+  text-decoration: none;
+  transition: transform .2s;
+}
+.footer a:hover {
+  transform: scale(1.15);
+}
