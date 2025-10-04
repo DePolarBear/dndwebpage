@@ -151,13 +151,13 @@ html {
   font-size: 30px;         /* veľkosť písma */
   text-decoration: none;   /* odstráni podčiarknutie */
   font-weight: bold;       /* hrubé písmo */
-  border-radius: 20px;       /* zaoblené rohy */
+  border-radius: 10px;       /* zaoblené rohy */
   transition: all 0.3s;     /* hladký efekt */
 }
 
 .menu a:hover {
-  color: #6200A6;              /* zmena farby pri prejdení myšou */
-  background-color: #ffe5b4;
+  color: #FFFFFF;              /* zmena farby pri prejdení myšou */
+  background-color: #6200A6;
 }
 
 .physical {
