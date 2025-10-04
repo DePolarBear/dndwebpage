@@ -130,3 +130,26 @@ th, td {
 .footer a:hover {
   transform: scale(1.15);
 }
+
+.spells {
+  list-style: none;        /* odstráni odrážky */
+  padding: 0;
+  margin: 0;
+}
+/*
+.spells li {
+  display: inline-block;   /* dá položky vedľa seba */
+/*  margin-right: 20px;      /* medzera medzi nimi */
+/*}*/
+
+.spells a {
+  color: black;            /* farba textu */
+  font-family: Arial, sans-serif; /* typ písma */
+  font-size: 20px;         /* veľkosť písma */
+  text-decoration: none;   /* odstráni podčiarknutie */
+  font-weight: bold;       /* hrubé písmo */
+}
+
+.spells a:hover {
+  color: blue;              /* zmena farby pri prejdení myšou */
+}
