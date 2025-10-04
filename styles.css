@@ -155,12 +155,15 @@ th, td {
 
 .physical {
   background-color: #f0f0f0;  /* šedá pre fyzické */
+  height:20px
 }
 
 .elemental {
   background-color: #ffe5b4; /* svetlo oranžová pre elementárne */
+  height:20px
 }
 
 .magical {
   background-color: #d0f0ff;   /* svetlo modrá pre magické */
+  height:20px
 }
