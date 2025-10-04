@@ -131,19 +131,26 @@ th, td {
   transform: scale(1.15);
 }
 
-.video-container {
-  width: 800px;       /* whatever width you want */
-  height: 300px;      /* visible height (this crops vertically) */
-  overflow: hidden;   /* hides the extra parts */
-  position: relative;
-  text-align: center;
-  border-radius: 12px;   /* zaoblené rohy (voliteľné) */
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #000;
 }
 
-.video-container iframe {
+.shorts-vertical-crop {
+  width: 300px;        /* šírka videa */
+  height: 400px;       /* výška viditeľnej časti (oreže fialové časti hore/dole) */
+  overflow: hidden;
+  position: relative;
+  border-radius: 12px; /* voliteľné – zaoblené rohy */
+}
+
+.shorts-vertical-crop iframe {
   position: absolute;
-  top: -100px;        /* shift video up to crop top part */
-  left: 100px;
+  top: -60px;          /* posunie video nahor → odstráni horný fialový pás */
+  left: 0;
   width: 100%;
-  height: 400px;      /* taller than container so you can shift */
+  height: 520px;       /* vyššie než kontajner, aby sa dalo posúvať */
 }
