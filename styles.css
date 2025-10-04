@@ -131,18 +131,17 @@ th, td {
   transform: scale(1.15);
 }
 
-.spells {
-  list-style: none;        /* odstráni odrážky */
+.menu {
+  list-style: none;        /* odstráni bodky pred položkami */
   padding: 0;
   margin: 0;
 }
 
-.spells li {
-  display: inline-block;   /* dá položky vedľa seba */
-  margin-right: 20px;      /* medzera medzi nimi */
+.menu li {
+  margin-bottom: 10px;     /* medzera medzi položkami */
 }
 
-.spells a {
+.menu a {
   color: black;            /* farba textu */
   font-family: Arial, sans-serif; /* typ písma */
   font-size: 20px;         /* veľkosť písma */
@@ -150,6 +149,7 @@ th, td {
   font-weight: bold;       /* hrubé písmo */
 }
 
-.spells a:hover {
-  color: blue;              /* zmena farby pri prejdení myšou */
+.menu a:hover {
+  color: red;              /* zmena farby pri prejdení myšou */
 }
+
