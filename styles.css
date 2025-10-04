@@ -132,11 +132,12 @@ th, td {
 }
 
 .video-container {
-  width: 400px;       /* whatever width you want */
+  width: 600px;       /* whatever width you want */
   height: 300px;      /* visible height (this crops vertically) */
   overflow: hidden;   /* hides the extra parts */
   position: relative;
   text-align: center;
+  border-radius: 12px;   /* zaoblené rohy (voliteľné) */
 }
 
 .video-container iframe {
