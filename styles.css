@@ -140,7 +140,7 @@ th, td {
 }
 
 .shorts-vertical-crop {
-  width: 600px;        /* šírka videa */
+  width: 400px;        /* šírka videa */
   height: 300px;       /* výška viditeľnej časti (oreže fialové časti hore/dole) */
   overflow: hidden;
   position: relative;
@@ -149,7 +149,7 @@ th, td {
 
 .shorts-vertical-crop iframe {
   position: absolute;
-  top: -60px;          /* posunie video nahor → odstráni horný fialový pás */
+  top: -100px;          /* posunie video nahor → odstráni horný fialový pás */
   left: 0;
   width: 100%;
   height: 700px;       /* vyššie než kontajner, aby sa dalo posúvať */
