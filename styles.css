@@ -138,7 +138,7 @@ html {
 .menu {
   list-style: none;        /* odstráni bodky pred položkami */
   padding: 0;
-  margin: 10px;
+  margin: 5px;
 }
 
 .menu li {
@@ -148,7 +148,7 @@ html {
 .menu a {
   color: black;            /* farba textu */
   font-family: Arial, sans-serif; /* typ písma */
-  font-size: 30px;         /* veľkosť písma */
+  font-size: 25px;         /* veľkosť písma */
   text-decoration: none;   /* odstráni podčiarknutie */
   font-weight: bold;       /* hrubé písmo */
 }
@@ -156,6 +156,7 @@ html {
 .menu a:hover {
   color: #FFFFFF;              /* zmena farby pri prejdení myšou */
   background-color: #6200A6;
+  margin: 5px;
   border-radius: 10px;       /* zaoblené rohy */
   transition: all 0.4s;     /* hladký efekt */
 }
