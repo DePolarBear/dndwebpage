@@ -133,14 +133,14 @@ th, td {
 
 .video-container {
   width: 400px;       /* whatever width you want */
-  height: 400px;      /* visible height (this crops vertically) */
+  height: 300px;      /* visible height (this crops vertically) */
   overflow: hidden;   /* hides the extra parts */
   position: relative;
 }
 
 .video-container iframe {
   position: absolute;
-  top: -100px;        /* shift video up to crop top part */
+  top: -150px;        /* shift video up to crop top part */
   left: 0;
   width: 100%;
   height: 600px;      /* taller than container so you can shift */
