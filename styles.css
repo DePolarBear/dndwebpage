@@ -136,11 +136,11 @@ th, td {
   padding: 0;
   margin: 0;
 }
-/*
+
 .spells li {
   display: inline-block;   /* dá položky vedľa seba */
-/*  margin-right: 20px;      /* medzera medzi nimi */
-/*}*/
+  margin-right: 20px;      /* medzera medzi nimi */
+}
 
 .spells a {
   color: black;            /* farba textu */
