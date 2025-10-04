@@ -1,4 +1,4 @@
-/* Farby a štýly pre celú stránku */
+er/* Farby a štýly pre celú stránku */
 body {
   background: url("images/background.jpg") no-repeat center top;
   background-size: cover;
@@ -142,8 +142,7 @@ th, td {
 .video-container iframe {
   position: absolute;
   top: -150px;        /* shift video up to crop top part */
-  left: 0;
+  left: center;
   width: 100%;
   height: 400px;      /* taller than container so you can shift */
-  text-align: center;
 }
