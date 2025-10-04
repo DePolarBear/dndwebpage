@@ -146,9 +146,9 @@ html {
 }
 
 .menu a {
-  color: black;            /* farba textu */
+  color: #000000;            /* farba textu */
   font-family: Arial, sans-serif; /* typ písma */
-  font-size: 25px;         /* veľkosť písma */
+  font-size: 30px;         /* veľkosť písma */
   text-decoration: none;   /* odstráni podčiarknutie */
   font-weight: bold;       /* hrubé písmo */
 }
