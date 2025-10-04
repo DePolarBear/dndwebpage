@@ -131,6 +131,10 @@ th, td {
   transform: scale(1.15);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .menu {
   list-style: none;        /* odstráni bodky pred položkami */
   padding: 0;
