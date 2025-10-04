@@ -139,8 +139,6 @@ th, td {
 
 .menu li {
   margin-bottom: 10px;     /* medzera medzi položkami */
-  border-radius: 8px;       /* zaoblené rohy */
-  transition: all 0.3s;     /* hladký efekt */
 }
 
 .menu a {
@@ -149,6 +147,8 @@ th, td {
   font-size: 20px;         /* veľkosť písma */
   text-decoration: none;   /* odstráni podčiarknutie */
   font-weight: bold;       /* hrubé písmo */
+  border-radius: 8px;       /* zaoblené rohy */
+  transition: all 0.3s;     /* hladký efekt */
 }
 
 .menu a:hover {
