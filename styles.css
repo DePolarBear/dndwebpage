@@ -139,6 +139,8 @@ th, td {
 
 .menu li {
   margin-bottom: 10px;     /* medzera medzi položkami */
+  border-radius: 8px;       /* zaoblené rohy */
+  transition: all 0.3s;     /* hladký efekt */
 }
 
 .menu a {
@@ -151,6 +153,7 @@ th, td {
 
 .menu a:hover {
   color: #6200A6;              /* zmena farby pri prejdení myšou */
+  background-color: white;
 }
 
 .physical {
