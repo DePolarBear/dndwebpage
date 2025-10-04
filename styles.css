@@ -130,27 +130,3 @@ th, td {
 .footer a:hover {
   transform: scale(1.15);
 }
-
-.page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: #000;
-}
-
-.shorts-vertical-crop {
-  width: 600px;        /* šírka videa */
-  height: 400px;       /* výška viditeľnej časti (oreže fialové časti hore/dole) */
-  overflow: hidden;
-  position: relative;
-  border-radius: 20px; /* voliteľné – zaoblené rohy */
-}
-
-.shorts-vertical-crop iframe {
-  position: absolute;
-  top: -150px;          /* posunie video nahor → odstráni horný fialový pás */
-  left: 0;
-  width: 100%;
-  height: 800px;       /* vyššie než kontajner, aby sa dalo posúvať */
-}
