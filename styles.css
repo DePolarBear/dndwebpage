@@ -141,10 +141,10 @@ th, td {
 
 .shorts-vertical-crop {
   width: 300px;        /* šírka videa */
-  height: 400px;       /* výška viditeľnej časti (oreže fialové časti hore/dole) */
+  height: 600px;       /* výška viditeľnej časti (oreže fialové časti hore/dole) */
   overflow: hidden;
   position: relative;
-  border-radius: 12px; /* voliteľné – zaoblené rohy */
+  border-radius: 20px; /* voliteľné – zaoblené rohy */
 }
 
 .shorts-vertical-crop iframe {
