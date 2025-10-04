@@ -197,6 +197,7 @@ html {
   padding-bottom: 56.25%; /* 16:9 aspect ratio */
   height: 0;
   overflow: hidden;
+  margin: 0 auto;          /* center horizontally */
 }
 
 .video-container iframe {
@@ -205,6 +206,6 @@ html {
   left: 0;
   width: 100%;   /* make iframe fill container */
   height: 100%;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 
