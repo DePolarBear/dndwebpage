@@ -148,16 +148,16 @@ html {
 .menu a {
   color: black;            /* farba textu */
   font-family: Arial, sans-serif; /* typ písma */
-  font-size: 20px;         /* veľkosť písma */
+  font-size: 30px;         /* veľkosť písma */
   text-decoration: none;   /* odstráni podčiarknutie */
   font-weight: bold;       /* hrubé písmo */
-  border-radius: 8px;       /* zaoblené rohy */
+  border-radius: 20px;       /* zaoblené rohy */
   transition: all 0.3s;     /* hladký efekt */
 }
 
 .menu a:hover {
   color: #6200A6;              /* zmena farby pri prejdení myšou */
-  background-color: white;
+  background-color: #ffe5b4;
 }
 
 .physical {
