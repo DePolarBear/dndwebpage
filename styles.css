@@ -193,8 +193,8 @@ html {
 
 .video-container {
   position: relative;
-  width: 100%;
-  padding-bottom: 56.25%; /* 16:9 pomer strán */
+  width: 100%;            /* full width */
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
   height: 0;
   overflow: hidden;
 }
@@ -203,6 +203,7 @@ html {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100%;   /* make iframe fill container */
   height: 100%;
 }
+
