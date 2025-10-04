@@ -205,5 +205,6 @@ html {
   left: 0;
   width: 100%;   /* make iframe fill container */
   height: 100%;
+  border-radius: 15px;
 }
 
