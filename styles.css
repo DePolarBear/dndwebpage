@@ -119,6 +119,7 @@ th, td {
   justify-content: center;
   gap: 28px;
   flex-wrap: wrap;
+  box-shadow: 2px 4px 12px rgba(0,0,0,0.2);
 }
 
 .footer a {
