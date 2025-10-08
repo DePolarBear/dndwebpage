@@ -202,7 +202,6 @@ html {
   height: 0;
   overflow: hidden;
   margin: 0 auto;          /* center horizontally */
-  box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.2);
 }
 
 .video-container iframe {
@@ -212,5 +211,6 @@ html {
   width: 100%;   /* make iframe fill container */
   height: 100%;
   border-radius: 20px;
+  box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.2);
 }
 
