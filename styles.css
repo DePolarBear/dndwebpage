@@ -202,6 +202,7 @@ html {
   height: 0;
   overflow: hidden;
   margin: 0 auto;          /* center horizontally */
+  border-radius: 20px;
   box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.2);
 }
 
