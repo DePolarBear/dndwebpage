@@ -61,6 +61,7 @@ img {
   max-width: 100%;
   height: auto;
   border-radius: 10px; /* default rounded images */
+  box-shadow: 2px 4px 12px rgba(0,0,0,0.2);
 }
 
 .center {
@@ -89,6 +90,7 @@ img {
   margin: 0 20px;       /* spacing around the image */
   border-radius: 10px;  /* rounded corners */
   flex-shrink: 0;
+  box-shadow: 2px 4px 12px rgba(0,0,0,0.2);
 }
 
 .race-text {
