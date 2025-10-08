@@ -64,6 +64,12 @@ img {
   box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.2);
 }
 
+img.no-shadow {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* default rounded images */
+}
+
 .center {
   text-align:center;
 }
