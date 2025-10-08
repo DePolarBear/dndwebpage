@@ -195,7 +195,7 @@ html {
   border-radius: 6px;
   font-weight: bold;
   transition: background-color 0.2s ease;
-  box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 4px 12px rgba(0,0,0,0.2);
 }
 
 .download-btn:hover {
