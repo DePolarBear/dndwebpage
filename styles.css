@@ -169,7 +169,6 @@ html {
 .menu a:hover {
   color: #FFFFFF;              /* zmena farby pri prejdení myšou */
   background-color: #6200A6;
-  margin: 15px;
   border-radius: 10px;       /* zaoblené rohy */
   transition: all 0.4s;     /* hladký efekt */
 }
