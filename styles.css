@@ -32,6 +32,7 @@ header {
   color: white;
   padding: 20px;
   text-align: center;
+  border-radius: 10px;
 }
 
 nav ul {
