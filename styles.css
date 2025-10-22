@@ -125,12 +125,7 @@ th, td {
 
 .footer {
   border-radius: 20px;
-  background: linear-gradient(
-  to right,
-  rgba(255,255,255,1) 0%,
-  rgba(255,255,255,0.9) 15%,
-  rgba(255,255,255,0.9) 85%,
-  rgba(255,255,255,1) 100%);
+  background: white;
   width: 100%;
   padding: 40px 0;
   text-align: center;
