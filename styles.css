@@ -177,7 +177,7 @@ html {
   background-color: #6200A6;
   border-radius: 10px;       /* zaoblené rohy */
   transition: all 0.4s ease;     /* hladký efekt */
-  padding:6px;
+  padding:5px;
 }
 
 .physical {
