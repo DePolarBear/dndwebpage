@@ -32,8 +32,9 @@ header {
   max-width: 1200px;
   background: linear-gradient(
     135deg,
-    black 0%,
-    #6200A6 100%
+    #000000ab 0%,
+    #6200A6 60%,
+    #ba4bffd6 100%
   );
   background-color: #6200A6;
   color: white;
