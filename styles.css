@@ -391,6 +391,10 @@ img.enlarge{cursor:zoom-in}              /* hint hover */
   100% {transform:rotate(360deg) scale(1);}
 }
 text{
-  font-size:32px;font-weight:bold;fill:#6200A6;
+  font-size:32px;
+  font-weight:bold;
+  fill:#6200A6;
+  dominant-baseline:middle;
+  text-anchor:middle;
 }
 /* ======================================================= DICE ANIMATION ================================================= */
