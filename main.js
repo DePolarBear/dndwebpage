@@ -1,29 +1,39 @@
 /* ============================================= DICE ROLLER + 2-D SHAPES ========================== */
-const roll = sides => Math.floor(Math.random() * sides) + 1;
+/* ===== DICE SHAPES – SVG points ===== */
+const svgPoints = {
+  d4 :'50,5 95,90 5,90',
+  d6 :'5,5 95,5 95,95 5,95',
+  d8 :'30,5 70,5 95,30 95,70 70,95 30,95 5,70 5,30',
+  d10:'50,5 95,50 50,95 5,50',
+  d12:'50,5 85,25 85,75 50,95 15,75 15,25',
+  d20:'50,5 61,35 98,35 68,57 79,91 50,70 21,91 32,57 2,35 39,35'
+};
 
 function initDice() {
   const resultEl = document.getElementById('result');
   const detailEl = document.getElementById('details');
-  const animEl   = document.getElementById('diceAnim');
+  const svgEl    = document.getElementById('diceAnim');
+  const shapeEl  = svgEl.querySelector('.dice-shape');
+  const textEl   = svgEl.querySelector('text');
 
   document.querySelectorAll('button.die').forEach(btn => {
     btn.addEventListener('click', () => {
       const sides = parseInt(btn.dataset.dice.replace(/\D/g,''));
 
-      // 1. správny 2-D tvar
-      animEl.className='dice-face shape-'+btn.dataset.dice;
+      // 1. správny tvar + farba
+      shapeEl.setAttribute('points', svgPoints[btn.dataset.dice]);
 
-      // 2. roztočíme
-      animEl.textContent='?';
-      animEl.classList.add('roll');
+      // 2. roztočíme SVG
+      textEl.textContent='?';
+      svgEl.classList.add('roll');
 
-      // 3. po skončení dopadne číslo
+      // 3. dopadne číslo
       setTimeout(()=>{
         const res=roll(sides);
-        animEl.textContent=res;
+        textEl.textContent=res;
         resultEl.textContent=res;
         detailEl.textContent=`hodil si ${btn.dataset.dice}`;
-        animEl.classList.remove('roll');
+        svgEl.classList.remove('roll');
       },600);
     });
   });
