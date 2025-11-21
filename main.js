@@ -1,5 +1,7 @@
 /* ============================================= DICE ROLLER + 2-D SHAPES ========================== */
-/* ===== DICE SHAPES – SVG points ===== */
+/* ============================================= DICE ROLLER + 2-D SVG ===== */
+const roll = sides => Math.floor(Math.random() * sides) + 1;
+
 const svgPoints = {
   d4 :'50,5 95,90 5,90',
   d6 :'5,5 95,5 95,95 5,95',
@@ -20,21 +22,21 @@ function initDice() {
     btn.addEventListener('click', () => {
       const sides = parseInt(btn.dataset.dice.replace(/\D/g,''));
 
-      // 1. správny tvar + farba
+      // 1. správny tvar
       shapeEl.setAttribute('points', svgPoints[btn.dataset.dice]);
 
-      // 2. roztočíme SVG
-      textEl.textContent='?';
+      // 2. spustíme animáciu (na <svg>)
+      textEl.textContent = '?';
       svgEl.classList.add('roll');
 
-      // 3. dopadne číslo
-      setTimeout(()=>{
-        const res=roll(sides);
-        textEl.textContent=res;
-        resultEl.textContent=res;
-        detailEl.textContent=`hodil si ${btn.dataset.dice}`;
+      // 3. po skončení dopadne číslo
+      setTimeout(() => {
+        const res = roll(sides);
+        textEl.textContent = res;
+        resultEl.textContent = res;
+        detailEl.textContent = `hodil si ${btn.dataset.dice}`;
         svgEl.classList.remove('roll');
-      },600);
+      }, 600);
     });
   });
 }
@@ -45,6 +47,7 @@ if (document.readyState === 'loading') {
 } else {
   initDice();
 }
+/* ============================================= /DICE ROLLER + 2-D SVG ===== */
 /* ============================================= /DICE ROLLER + 2-D SHAPES =========================== */
 
 /* ================================= GENERÁTOR POSTAVY (s validáciou) ================================== */
