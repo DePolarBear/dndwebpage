@@ -49,18 +49,26 @@ document.getElementById('rollStats').addEventListener('click',()=>{
 
 // validácia
 function validateChar(){
+  // 1. meno – povinné, bez číslic
   const meno=document.getElementById('meno').value.trim();
   if(!meno){alert('Zadaj meno postavy.');return false;}
+  if(/\d/.test(meno)){alert('Meno nesmie obsahovať číslice.');return false;}
 
+  // 2. úroveň
   const lvl=parseInt(document.getElementById('uroven').value);
   if(isNaN(lvl)||lvl<1||lvl>20){alert('Úroveň musí byť 1–20.');return false;}
 
+  // 3. atribúty 3–18 + súčet ≤ 28
   const attrs=['sil','obr','kon','int','mud','cha'];
+  let sum=0;
   for(const id of attrs){
     const v=parseInt(document.getElementById(id).value);
     if(isNaN(v)||v<3||v>18){alert('Atribúty musia byť 3–18.');return false;}
+    sum+=v;
   }
-  return true;
+  if(sum>28){alert(`Súčet atribútov nesmie presiahnuť 28 (máš ${sum}).`);return false;}
+
+  return true; // všetko OK
 }
 
 // udalosti s validáciou
