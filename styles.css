@@ -228,3 +228,41 @@ html {
   box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.2);
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.glow {
+  animation: glowPulse 2s infinite alternate;
+}
+
+@keyframes glowPulse {
+  from {
+    text-shadow: 0 0 5px #7b4fff, 0 0 15px #a78bfa;
+  }
+  to {
+    text-shadow: 0 0 25px #c4b5fd, 0 0 40px #ddd6fe;
+  }
+}
+
+#dice {
+  display: inline-block;
+  padding: 20px;
+  font-size: 2rem;
+  border: 2px solid #444;
+  width: 60px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+#dice.rolling {
+  transform: rotate(360deg) scale(1.2);
+}
+
