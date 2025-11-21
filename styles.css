@@ -279,3 +279,46 @@ button.die:active{
   opacity:.7;
 }
 /* ============ DICE ROLLER =========== */
+
+/* ============ GENERÁTOR POSTAVY ========== */
+.char-box{
+  max-width:640px;
+  margin:40px auto;
+  padding:25px;
+  background:rgba(255,255,255,.92);
+  border-radius:12px;
+  box-shadow:0 4px 15px rgba(0,0,0,.25);
+  font-family:Arial, sans-serif;
+}
+.char-box h2{margin-top:0;color:#6200A6}
+.char-box label{display:block;margin-top:12px;font-weight:bold}
+.char-box input, .char-box select{
+  width:100%;
+  padding:6px 8px;
+  margin-top:4px;
+  border:1px solid #ccc;
+  border-radius:6px;
+}
+.atrib-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  margin-top:10px;
+}
+.atrib-grid input{width:60px;text-align:center}
+#output{
+  margin-top:15px;
+  background:#f7f7f7;
+  padding:10px;
+  border-radius:6px;
+  white-space:pre-wrap;
+  font-size:.95rem;
+}
+button[id^="roll"], button[id^="save"], button[id^="load"], button[id^="print"]{
+  margin-top:12px;margin-right:8px;padding:8px 14px;
+  border:2px solid #d4af37;
+  background:#fff;border-radius:6px;font-weight:bold;cursor:pointer;
+}
+button:hover{background:#faf0cc
+}
+/* ============ GENERÁTOR POSTAVY ========== */
