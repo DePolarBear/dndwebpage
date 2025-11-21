@@ -1,4 +1,4 @@
-/* ===== DICE ROLLER ===== */
+/* ============================================= DICE ROLLER =================================== */
 const roll = sides => Math.floor(Math.random() * sides) + 1;
 
 function initDice() {
@@ -19,3 +19,96 @@ if (document.readyState === 'loading') {
 } else {                // already loaded
   initDice();
 }
+/* ========================================== DICE ROLLER ============================================== */
+
+/* ================================= GENERÁTOR POSTAVY (s validáciou) ================================== */
+const rasy  = ['Človek','Elf','Trpaslík','Hobit','Poloorc','Drakonid'];
+const triedy= ['Bojovník','Kňaz','Čarodej','Strážca','Zlodej','Barbar'];
+
+// naplnenie selectov
+function fillSelect(id,arr){
+  const s=document.getElementById(id);
+  s.innerHTML=arr.map(x=>`<option>${x}</option>`).join('');
+}
+fillSelect('rasa',rasy);
+fillSelect('trieda',triedy);
+
+// 4d6 drop lowest
+function roll4d6drop(){
+  const rolls=Array.from({length:4},()=>Math.floor(Math.random()*6)+1);
+  rolls.sort((a,b)=>a-b);
+  return rolls.slice(1).reduce((a,b)=>a+b,0);
+}
+
+// hod všetky atribúty
+document.getElementById('rollStats').addEventListener('click',()=>{
+  ['sil','obr','kon','int','mud','cha'].forEach(id=>{
+    document.getElementById(id).value=roll4d6drop();
+  });
+});
+
+// validácia
+function validateChar(){
+  const meno=document.getElementById('meno').value.trim();
+  if(!meno){alert('Zadaj meno postavy.');return false;}
+
+  const lvl=parseInt(document.getElementById('uroven').value);
+  if(isNaN(lvl)||lvl<1||lvl>20){alert('Úroveň musí byť 1–20.');return false;}
+
+  const attrs=['sil','obr','kon','int','mud','cha'];
+  for(const id of attrs){
+    const v=parseInt(document.getElementById(id).value);
+    if(isNaN(v)||v<3||v>18){alert('Atribúty musia byť 3–18.');return false;}
+  }
+  return true;
+}
+
+// udalosti s validáciou
+document.getElementById('saveChar').addEventListener('click',()=>{
+  if(!validateChar())return;
+  const data={
+    meno  :document.getElementById('meno').value,
+    rasa  :document.getElementById('rasa').value,
+    trieda:document.getElementById('trieda').value,
+    uroven:document.getElementById('uroven').value,
+    sil:document.getElementById('sil').value,
+    obr:document.getElementById('obr').value,
+    kon:document.getElementById('kon').value,
+    int:document.getElementById('int').value,
+    mud:document.getElementById('mud').value,
+    cha:document.getElementById('cha').value
+  };
+  localStorage.setItem('ddchar',JSON.stringify(data));
+  alert('Postava uložená!');
+});
+
+document.getElementById('loadChar').addEventListener('click',()=>{
+  const raw=localStorage.getItem('ddchar');
+  if(!raw){alert('Nič uložené.');return;}
+  const data=JSON.parse(raw);
+  Object.keys(data).forEach(k=>{
+    const el=document.getElementById(k);
+    if(el)el.value=data[k];
+  });
+  alert('Postava načítaná.');
+});
+
+document.getElementById('printChar').addEventListener('click',()=>{
+  if(!validateChar())return;
+  const meno=document.getElementById('meno').value||'Bezmenný';
+  const r=document.getElementById('rasa').value;
+  const t=document.getElementById('trieda').value;
+  const lvl=document.getElementById('uroven').value;
+  const attrs=['sil','obr','kon','int','mud','cha'].map(id=>{
+    const name=id.toUpperCase();
+    const val=document.getElementById(id).value;
+    const mod=Math.floor((val-10)/2);
+    return `${name}: ${val} (${mod>=0?'+':''}${mod})`;
+  }).join('\n');
+
+  document.getElementById('output').textContent=
+`${meno}, ${r} ${t} ${lvl}
+----------------------------
+${attrs}`;
+});
+/* =============================== GENERÁTOR POSTAVY (s validáciou) ============================= */
