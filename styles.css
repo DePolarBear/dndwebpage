@@ -371,3 +371,25 @@ img.enlarge{cursor:zoom-in}              /* hint hover */
 #overlay.show img{transform:scale(1)
 }
 /* ===================== LIGHT-BOX (img enlarge) =================== */
+
+/* ========================== DICE ANIMATION ======================== */
+.dice-face{
+  margin:10px auto;
+  width:70px;height:70px;
+  background:#fff;
+  border:3px solid #d4af37;
+  border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:2rem;font-weight:bold;color:#6200A6;
+  box-shadow:0 0 10px rgba(212,175,55,.6);
+  transition:transform .3s;
+}
+.dice-face.roll{
+  animation:roll .6s ease-out;
+}
+@keyframes roll{
+  0%   {transform:rotateX(0) rotateY(0) scale(1);}
+  50%  {transform:rotateX(360deg) rotateY(720deg) scale(1.2);}
+  100% {transform:rotateX(720deg) rotateY(1080deg) scale(1);}
+}
+/* ========================== DICE ANIMATION ======================== */
