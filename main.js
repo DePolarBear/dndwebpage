@@ -1,22 +1,20 @@
-// === Fade-in on scroll ===
-document.addEventListener("DOMContentLoaded", () => {
-  const faders = document.querySelectorAll(".fade-in");
+// Skrytie nav baru
+<script>
+let lastScrollY = window.scrollY;
+const nav = document.querySelector("nav");
 
-  const appearOptions = {
-    threshold: 0.25,
-  };
+window.addEventListener("scroll", () => {
+    if (window.scrollY > lastScrollY) {
+        // Scroll dole → skryť navbar
+        nav.style.transform = "translateY(-100%)";
+    } else {
+        // Scroll hore → zobraziť navbar
+        nav.style.transform = "translateY(0)";
+    }
+    lastScrollY = window.scrollY;
+});
+</script>
 
-  const appearOnScroll = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add("appear");
-      observer.unobserve(entry.target);
-    });
-  }, appearOptions);
-
-  faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-  });
 
   // === Dice roll logic ===
   const dice = document.getElementById("dice");
