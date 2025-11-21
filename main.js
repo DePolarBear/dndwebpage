@@ -42,9 +42,17 @@ function roll4d6drop(){
 
 // hod všetky atribúty
 document.getElementById('rollStats').addEventListener('click',()=>{
-  ['sil','obr','kon','int','mud','cha'].forEach(id=>{
-    document.getElementById(id).value=roll4d6drop();
-  });
+  const attrs=['sil','obr','kon','int','mud','cha'];
+  let rolls,safe=0;                       // safe = poistka proti nekonečnému loopu
+  do{
+    rolls=attrs.map(()=>roll4d6drop());
+    safe++;
+  }while(rolls.reduce((a,b)=>a+b,0)>28 && safe<1000); // max 1000 pokusov
+
+  rolls.forEach((v,i)=> document.getElementById(attrs[i]).value=v );
+
+  const sum=rolls.reduce((a,b)=>a+b,0);
+  alert(`Hodená sada (súčet ${sum}) – všetko v poriadku!`);
 });
 
 // validácia
