@@ -366,7 +366,7 @@ img.enlarge{cursor:zoom-in}              /* hint hover */
 #overlay img{
   max-width:90vw;max-height:90vh;
   transform:scale(.8);transition:transform .3s;
-  box-shadow:0 0 20px 8px #d4af37,0 0 40px 20px rgba(212,175,55,.4);
+  box-shadow:0 0 20px 8px #6200A6,0 0 40px 20px rgba(212,175,55,.4);
 }
 #overlay.show img{transform:scale(1)
 }
