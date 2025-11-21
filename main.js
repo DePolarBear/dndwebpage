@@ -1,54 +1,38 @@
-/* ============================================= DICE ROLLER + 2-D SHAPES ========================== */
-/* ============================================= DICE ROLLER + 2-D SVG ===== */
+/* ============================================= DICE ROLLER + ANIM =============================================== */
 const roll = sides => Math.floor(Math.random() * sides) + 1;
 
-const svgPoints = {
-  d4 :'50,10 85,85 15,85',                       // rovnoramenný trojuholník
-  d6 :'15,15 85,15 85,85 15,85',                 // štvorec
-  d8 :'30,10 70,10 90,30 90,70 70,90 30,90 10,70 10,30', // osemuholník
-  d10:'50,10 90,50 50,90 10,50',                  // kosoštvorec
-  d12:'50,8 77,23 90,50 77,77 50,92 23,77 10,50 23,23',   // dvanásťuholník
-  d20:'50,5 56,15 65,12 74,18 77,28 79,38 75,48 68,56 60,64 50,68 40,64 32,56 25,48 21,38 23,28 26,18 35,12 44,15' // 20-uholník
-};
-
 function initDice() {
-  const resultEl = document.getElementById('result');
-  const detailEl = document.getElementById('details');
-  const svgEl    = document.getElementById('diceAnim');
-  const shapeEl  = svgEl.querySelector('.dice-shape');
-  const textEl   = svgEl.querySelector('text');
+  const resultEl  = document.getElementById('result');
+  const detailsEl = document.getElementById('details');
+  const animEl    = document.getElementById('diceAnim');
 
   document.querySelectorAll('button.die').forEach(btn => {
     btn.addEventListener('click', () => {
       const sides = parseInt(btn.dataset.dice.replace(/\D/g,''));
 
-      // 1. správny tvar
-      shapeEl.setAttribute('points', svgPoints[btn.dataset.dice]);
+      // start animation
+      animEl.textContent = '?';
+      animEl.classList.add('roll');
 
-      // 2. spustíme animáciu (na <svg>)
-      textEl.textContent = '?';
-      svgEl.classList.add('roll');
-
-      // 3. po skončení dopadne číslo
+      // after animation finishes → show real result
       setTimeout(() => {
         const res = roll(sides);
-        textEl.textContent = res;
+        animEl.textContent   = res;
         resultEl.textContent = res;
-        detailEl.textContent = `hodil si ${btn.dataset.dice}`;
-        svgEl.classList.remove('roll');
-      }, 600);
+        detailsEl.textContent = `hodil si ${btn.dataset.dice}`;
+        animEl.classList.remove('roll');
+      }, 600); // same length as CSS animation
     });
   });
 }
 
-// spustenie
+// run when DOM ready
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initDice);
 } else {
   initDice();
 }
-/* ============================================= /DICE ROLLER + 2-D SVG ===== */
-/* ============================================= /DICE ROLLER + 2-D SHAPES =========================== */
+/* ============================================= /DICE ROLLER + ANIM ================================================= */
 
 /* ================================= GENERÁTOR POSTAVY (s validáciou) ================================== */
 /* ===== POINT-BUY 27-bodový generátor ===== */
