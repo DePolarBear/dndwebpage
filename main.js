@@ -26,7 +26,7 @@ if (document.readyState === 'loading') {
 const rasy  = ['Človek','Elf','Trpaslík','Hobit','Poloorc','Drakonid'];
 const triedy= ['Bojovník','Kňaz','Čarodej','Strážca','Zlodej','Barbar'];
 const attrs = ['sil','obr','kon','int','mud','cha'];
-const attrNames={sil:'Sila',obr:'Obratnosť',kon:'Konštitúcia',int:'Inteligencia',mud:'Múdrosť',cha:'Charizma'};
+const attrNames={sil:'Sila',obr:'Obratnosť',kon:'Konštrukcia',int:'Inteligencia',mud:'Múdrosť',cha:'Charizma'};
 
 // cenník 8→15
 const cost=[0,1,2,3,4,5,7,9]; // index 0 = hodnota 8
