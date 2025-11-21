@@ -1,28 +1,28 @@
-/* ============================================= DICE ROLLER + ANIM + SHAPES ===== */
+/* ============================================= DICE ROLLER + 2-D SHAPES ========================== */
 const roll = sides => Math.floor(Math.random() * sides) + 1;
 
 function initDice() {
-  const resultEl  = document.getElementById('result');
-  const detailsEl = document.getElementById('details');
-  const animEl    = document.getElementById('diceAnim');
+  const resultEl = document.getElementById('result');
+  const detailEl = document.getElementById('details');
+  const animEl   = document.getElementById('diceAnim');
 
   document.querySelectorAll('button.die').forEach(btn => {
     btn.addEventListener('click', () => {
       const sides = parseInt(btn.dataset.dice.replace(/\D/g,''));
 
-      // 1. zmeň tvar podľa kocky
-      animEl.className='dice-face shape-'+btn.dataset.dice; // d4/d6/…
+      // 1. správny 2-D tvar
+      animEl.className='dice-face shape-'+btn.dataset.dice;
 
-      // 2. začni animáciu
+      // 2. roztočíme
       animEl.textContent='?';
       animEl.classList.add('roll');
 
-      // 3. po skončení ukáž výsledok
+      // 3. po skončení dopadne číslo
       setTimeout(()=>{
         const res=roll(sides);
         animEl.textContent=res;
         resultEl.textContent=res;
-        detailsEl.textContent=`hodil si ${btn.dataset.dice}`;
+        detailEl.textContent=`hodil si ${btn.dataset.dice}`;
         animEl.classList.remove('roll');
       },600);
     });
@@ -35,7 +35,7 @@ if (document.readyState === 'loading') {
 } else {
   initDice();
 }
-/* ============================================= /DICE ROLLER + ANIM + SHAPES ===== */
+/* ============================================= /DICE ROLLER + 2-D SHAPES =========================== */
 
 /* ================================= GENERÁTOR POSTAVY (s validáciou) ================================== */
 /* ===== POINT-BUY 27-bodový generátor ===== */
