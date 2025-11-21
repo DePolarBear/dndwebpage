@@ -1,25 +1,38 @@
-/* ============================================= DICE ROLLER =================================== */
+/* ============================================= DICE ROLLER + ANIM =================================== */
 const roll = sides => Math.floor(Math.random() * sides) + 1;
 
 function initDice() {
+  const resultEl  = document.getElementById('result');
+  const detailsEl = document.getElementById('details');
+  const animEl    = document.getElementById('diceAnim');
+
   document.querySelectorAll('button.die').forEach(btn => {
     btn.addEventListener('click', () => {
-      const dice  = btn.dataset.dice;
-      const sides = parseInt(dice.replace(/\D/g, ''));
-      const result = roll(sides);
-      document.getElementById('result').textContent  = result;
-      document.getElementById('details').textContent = `hodil si ${dice}`;
+      const sides = parseInt(btn.dataset.dice.replace(/\D/g,''));
+
+      // start animation
+      animEl.textContent = '?';
+      animEl.classList.add('roll');
+
+      // after animation finishes → show real result
+      setTimeout(() => {
+        const res = roll(sides);
+        animEl.textContent   = res;
+        resultEl.textContent = res;
+        detailsEl.textContent = `hodil si ${btn.dataset.dice}`;
+        animEl.classList.remove('roll');
+      }, 600); // same length as CSS animation
     });
   });
 }
 
-// run when DOM is ready (works in every browser)
+// run when DOM ready
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initDice);
-} else {                // already loaded
+} else {
   initDice();
 }
-/* ========================================== DICE ROLLER ============================================== */
+/* ============================================= /DICE ROLLER + ANIM =================================== */
 
 /* ================================= GENERÁTOR POSTAVY (s validáciou) ================================== */
 /* ===== POINT-BUY 27-bodový generátor ===== */
