@@ -333,3 +333,45 @@ html {
   opacity: 1;
   transform: translateY(0);
 }
+
+.character-form {
+  background: rgba(0,0,0,0.6);
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: white;
+  backdrop-filter: blur(4px);
+}
+
+.character-form input,
+.character-form select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+}
+
+.character-form button {
+  padding: 10px;
+  background: #b30000;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.character-form button:hover {
+  background: #8a0000;
+}
+
+.error-message {
+  color: #ff5b5b;
+}
+
+.success-message {
+  color: #9cff9c;
+}
