@@ -44,6 +44,10 @@ header {
   border-radius: 10px;
 }
 
+nav {
+  transition: transform 0.3s ease;
+}
+
 nav ul {
   list-style: none;
   padding: 0;
