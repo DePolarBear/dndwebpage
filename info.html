@@ -57,6 +57,45 @@
         <br>
         <hr>
         <br>
+
+        <!-- ======================== GENERÁTOR POSTAVY ========================== -->
+        <section id="char-gen" class="char-box">
+          <h2>Vytvor si postavu</h2>
+        
+          <label>Meno:</label>
+          <input type="text" id="meno" required placeholder="Napíš meno postavy">
+        
+          <label>Rasa:</label>
+          <select id="rasa" required></select>
+        
+          <label>Trieda:</label>
+          <select id="trieda" required></select>
+        
+          <label>Úroveň:</label>
+          <input type="number" id="uroven" min="1" max="20" required value="1">
+        
+          <h3>Základné atribúty (3–18)</h3>
+          <div class="atrib-grid">
+            <div><label>Sila</label>      <input type="number" id="sil" min="3" max="18" required value="8"></div>
+            <div><label>Obratnosť</label> <input type="number" id="obr" min="3" max="18" required value="8"></div>
+            <div><label>Konštitúcia</label><input type="number" id="kon" min="3" max="18" required value="8"></div>
+            <div><label>Inteligencia</label><input type="number" id="int" min="3" max="18" required value="8"></div>
+            <div><label>Múdrosť</label>   <input type="number" id="mud" min="3" max="18" required value="8"></div>
+            <div><label>Charizma</label>  <input type="number" id="cha" min="3" max="18" required value="8"></div>
+          </div>
+        
+          <button id="rollStats">Hod 4d6 drop lowest</button>
+          <button id="saveChar">Ulož postavu</button>
+          <button id="loadChar">Načítaj postavu</button>
+          <button id="printChar">Vypíš postavu</button>
+        
+          <pre id="output"></pre>
+        </section>
+        <!-- ============================== /GENERÁTOR POSTAVY ============================================= -->
+
+        <br>
+        <hr>
+        <br>
         
         <h2>Základná príručka na hranie D&D</h2>
           <p>
