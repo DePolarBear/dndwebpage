@@ -352,4 +352,22 @@ button:hover{
   white-space:pre-wrap;
   font-size:.95rem
 }
-/* ============ GENERÁTOR POSTAVY ========== */
+/* ======================== GENERÁTOR POSTAVY ================== */
+
+/* ===================== LIGHT-BOX (img enlarge) =================== */
+img.enlarge{cursor:zoom-in}              /* hint hover */
+#overlay{
+  position:fixed;inset:0;background:rgba(0,0,0,.85);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;transition:opacity .3s;
+  z-index:999;
+}
+#overlay.show{opacity:1;pointer-events:all}
+#overlay img{
+  max-width:90vw;max-height:90vh;
+  transform:scale(.8);transition:transform .3s;
+  box-shadow:0 0 20px 8px #d4af37,0 0 40px 20px rgba(212,175,55,.4);
+}
+#overlay.show img{transform:scale(1)
+}
+/* ===================== LIGHT-BOX (img enlarge) =================== */
