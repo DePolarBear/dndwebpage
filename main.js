@@ -1,4 +1,4 @@
-/* ============================================= DICE ROLLER + ANIM =================================== */
+/* ============================================= DICE ROLLER + ANIM + SHAPES ===== */
 const roll = sides => Math.floor(Math.random() * sides) + 1;
 
 function initDice() {
@@ -10,29 +10,32 @@ function initDice() {
     btn.addEventListener('click', () => {
       const sides = parseInt(btn.dataset.dice.replace(/\D/g,''));
 
-      // start animation
-      animEl.textContent = '?';
+      // 1. zmeň tvar podľa kocky
+      animEl.className='dice-face shape-'+btn.dataset.dice; // d4/d6/…
+
+      // 2. začni animáciu
+      animEl.textContent='?';
       animEl.classList.add('roll');
 
-      // after animation finishes → show real result
-      setTimeout(() => {
-        const res = roll(sides);
-        animEl.textContent   = res;
-        resultEl.textContent = res;
-        detailsEl.textContent = `hodil si ${btn.dataset.dice}`;
+      // 3. po skončení ukáž výsledok
+      setTimeout(()=>{
+        const res=roll(sides);
+        animEl.textContent=res;
+        resultEl.textContent=res;
+        detailsEl.textContent=`hodil si ${btn.dataset.dice}`;
         animEl.classList.remove('roll');
-      }, 600); // same length as CSS animation
+      },600);
     });
   });
 }
 
-// run when DOM ready
+// spustenie
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initDice);
 } else {
   initDice();
 }
-/* ============================================= /DICE ROLLER + ANIM =================================== */
+/* ============================================= /DICE ROLLER + ANIM + SHAPES ===== */
 
 /* ================================= GENERÁTOR POSTAVY (s validáciou) ================================== */
 /* ===== POINT-BUY 27-bodový generátor ===== */
