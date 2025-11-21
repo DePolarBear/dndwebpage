@@ -138,3 +138,19 @@ document.getElementById('printChar').addEventListener('click',()=>{
 ${rows}`;
 });
 /* =============================== GENERÁTOR POSTAVY (s validáciou) ============================= */
+
+/* ======================= LIGHT-BOX  (uses jQuery only for class toggle) ====================== */
+$(function(){                       // čaká na DOM
+  const $overlay = $('#overlay');
+  const $img     = $('#overlayImg');
+
+  // otvorí sa po kliku na obrázok s class="enlarge"
+  $(document).on('click','img.enlarge',function(){
+    $img.attr('src',this.src);
+    $overlay.addClass('show');
+  });
+
+  // zavrie sa klik na pozadie alebo na samotný obrázok
+  $overlay.on('click',()=>$overlay.removeClass('show'));
+});
+/* ======================= LIGHT-BOX  (uses jQuery only for class toggle) ====================== */
