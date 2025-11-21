@@ -32,25 +32,35 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // === Form validation ===
-  const form = document.getElementById("characterForm");
-  if (form) {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const name = document.getElementById("name").value.trim();
-      const cls = document.getElementById("class").value;
+ // === Form validation ===
+const form = document.getElementById("characterForm");
+if (form) {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-      const errorEl = document.getElementById("error");
-      if (!name || !cls) {
-        if (errorEl) errorEl.style.display = "block";
-        return;
-      }
-      if (errorEl) errorEl.style.display = "none";
+    const name = document.getElementById("name").value.trim();
+    const race = document.getElementById("race").value;
+    const cls = document.getElementById("class").value;
 
-      // Here you can do anything with the validated data
-      alert("Character created: " + name + " the " + cls);
-      // Optionally: you could reset form, or push data somewhere
-      form.reset();
-    });
-  }
-});
+    const errorEl = document.getElementById("formError");
+    const successEl = document.getElementById("formSuccess");
+
+    if (!name || !race || !cls) {
+      errorEl.style.display = "block";
+      successEl.style.display = "none";
+      return;
+    }
+
+    errorEl.style.display = "none";
+    successEl.style.display = "block";
+
+    // reset form
+    form.reset();
+
+    // hide success after 2 seconds
+    setTimeout(() => {
+      successEl.style.display = "none";
+    }, 2000);
+  });
+}
+
