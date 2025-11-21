@@ -1,3 +1,5 @@
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
 /* ============================================= DICE ROLLER =================================== */
 const roll = sides => Math.floor(Math.random() * sides) + 1;
 
