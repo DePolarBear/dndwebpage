@@ -281,44 +281,75 @@ button.die:active{
 /* ============ DICE ROLLER =========== */
 
 /* ============ GENERÁTOR POSTAVY ========== */
+/* ===== POINT-BUY ===== */
 .char-box{
-  max-width:640px;
-  margin:40px auto;
+  max-width:680px;margin:40px auto;
   padding:25px;
   background:rgba(255,255,255,.92);
   border-radius:12px;
   box-shadow:0 4px 15px rgba(0,0,0,.25);
-  font-family:Arial, sans-serif;
 }
-.char-box h2{margin-top:0;color:#6200A6}
-.char-box label{display:block;margin-top:12px;font-weight:bold}
-.char-box input, .char-box select{
+.char-box h2{
+  margin-top:0;color:#6200A6
+}
+.char-box label{
+  display:block;
+  margin-top:12px;
+  font-weight:bold
+}
+.char-box input,.char-box select{
   width:100%;
   padding:6px 8px;
   margin-top:4px;
   border:1px solid #ccc;
-  border-radius:6px;
+  border-radius:6px
 }
-.atrib-grid{
+#attrGrid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:10px;
-  margin-top:10px;
+  gap:12px;margin-top:10px
 }
-.atrib-grid input{width:60px;text-align:center}
+.abBox{
+  background:#fff;
+  border:1px solid #d4af37;
+  border-radius:8px;padding:8px;
+  text-align:center
+}
+.abBox button{
+  margin:4px 2px;
+  width:28px;height:28px;
+  border:1px solid #6200A6;
+  background:#fff;border-radius:4px;
+  font-weight:bold;
+  cursor:pointer
+}
+.abBox button:hover{
+  background:#f4f0ff
+}
+.abVal{
+  font-size:1.3rem;
+  font-weight:bold;
+  margin:4px 0
+}
+#rem{
+  color:#d4af37;font-size:1.1rem
+}
+button[id^="save"],button[id^="load"],button[id^="print"]{
+  margin-top:12px;
+  margin-right:8px;
+  padding:8px 14px;
+  border:2px solid #d4af37;
+  background:#fff;border-radius:6px;
+  font-weight:bold;cursor:pointer
+}
+button:hover{
+  background:#faf0cc
+}
 #output{
   margin-top:15px;
   background:#f7f7f7;
-  padding:10px;
-  border-radius:6px;
+  padding:10px;border-radius:6px;
   white-space:pre-wrap;
-  font-size:.95rem;
-}
-button[id^="roll"], button[id^="save"], button[id^="load"], button[id^="print"]{
-  margin-top:12px;margin-right:8px;padding:8px 14px;
-  border:2px solid #d4af37;
-  background:#fff;border-radius:6px;font-weight:bold;cursor:pointer;
-}
-button:hover{background:#faf0cc
+  font-size:.95rem
 }
 /* ============ GENERÁTOR POSTAVY ========== */
