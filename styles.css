@@ -393,3 +393,44 @@ img.enlarge{cursor:zoom-in}              /* hint hover */
   100% {transform:rotateX(720deg) rotateY(1080deg) scale(1);}
 }
 /* ======================================================= DICE ANIMATION ================================================= */
+
+/* ==========  class-menu.css  ========== */
+#classMenu {
+  position      : fixed;
+  top           : 50%;
+  right         : 15px;
+  transform     : translateY(-50%);
+  background    : rgba(255,255,255,.95);
+  border        : 2px solid #6200A6;
+  border-radius : 8px;
+  padding       : 10px 15px;
+  max-height    : 70vh;
+  overflow-y    : auto;
+  z-index       : 999;
+  box-shadow    : 0 4px 15px rgba(0,0,0,.25);
+}
+
+#classMenu ul {
+  list-style : none;
+  margin     : 0;
+  padding    : 0;
+}
+
+#classMenu a {
+  display         : block;
+  color           : #000;
+  font-weight     : bold;
+  padding         : 6px 10px;
+  text-decoration : none;
+  border-radius   : 4px;
+  transition      : background .25s;
+}
+
+#classMenu a:hover {
+  background : #f4f0ff;
+}
+
+#classMenu a.active {
+  background : #6200A6;
+  color      : #fff;
+}
