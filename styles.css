@@ -398,7 +398,7 @@ img.enlarge{cursor:zoom-in}              /* hint hover */
 #classMenu {
   position      : fixed;
   top           : 50%;
-  right         : 12px;
+  right         : 10px;
   transform     : translateY(-50%);
   background    : rgba(255,255,255,.95);
   border        : 2px solid #6200A6;
