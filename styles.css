@@ -393,3 +393,49 @@ img.enlarge{cursor:zoom-in}              /* hint hover */
   100% {transform:rotateX(720deg) rotateY(1080deg) scale(1);}
 }
 /* ======================================================= DICE ANIMATION ================================================= */
+
+/* ===== MOBILNÉ MENU ===== */
+.mob-btn{
+  display:none;              /* schované na desktope */
+  position:fixed;
+  top:15px;right:15px;
+  z-index:1001;
+  background:#6200A6;
+  color:#fff;
+  border:none;
+  border-radius:6px;
+  padding:8px 12px;
+  font-size:1.3rem;
+  cursor:pointer;
+  box-shadow:0 2px 8px rgba(0,0,0,.25);
+}
+.side-nav{
+  position:fixed;
+  top:0;right:-260px;        /* schované za pravým okrajom */
+  width:260px;height:100%;
+  background:linear-gradient(135deg,#000000ab 0%,#6200A6 60%);
+  padding:60px 20px 20px;
+  box-sizing:border-box;
+  transition:right .35s ease;
+  z-index:1000;
+}
+.side-nav.show{right:0;}     /* vysunuté */
+.side-nav ul{
+  list-style:none;
+  margin:0;padding:0;
+}
+.side-nav li{margin:12px 0}
+.side-nav a{
+  color:#fff;text-decoration:none;
+  font-size:1.1rem;font-weight:500;
+  display:block;padding:8px 0;
+  border-bottom:1px solid rgba(255,255,255,.15);
+  transition:color .2s;
+}
+.side-nav a:hover{color:#d4af37}
+
+/* zobrazíme tlačidlo pod 768 px */
+@media (max-width:768px){
+  .mob-btn{display:block}
+  header nav{display:none}   /* schováme pôvodné menu */
+}
