@@ -169,3 +169,38 @@ $(function(){                       // čaká na DOM
   $overlay.on('click',()=>$overlay.removeClass('show'));
 });
 /* ======================= LIGHT-BOX  (uses jQuery only for class toggle) ====================== */
+
+/* ====================================  class-menu.js  ===================================== */
+$(function () {
+  const $sections = $('.race-section');
+  const $menu     = $('<nav id="classMenu"><ul></ul></nav>');
+  const $list     = $menu.find('ul');
+
+  // build links
+  $sections.each(function () {
+    const id   = this.id;
+    const name = $(this).find('h1').first().text();
+    $list.append(`<li><a href="#${id}">${name}</a></li>`);
+  });
+
+  // inject menu
+  $menu.appendTo('body');
+
+  // smooth scroll
+  $list.on('click', 'a', function (e) {
+    e.preventDefault();
+    const $tgt = $(this.getAttribute('href'));
+    $('html,body').animate({ scrollTop: $tgt.offset().top - 20 }, 400);
+  });
+
+  // scroll-spy highlight
+  $(window).on('scroll', function () {
+    let current = '';
+    const st = $(this).scrollTop() + 120;
+    $sections.each(function () {
+      if (st >= $(this).offset().top) current = this.id;
+    });
+    $list.find('a').removeClass('active')
+         .filter(`[href="#${current}"]`).addClass('active');
+  });
+});
