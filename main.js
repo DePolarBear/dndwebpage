@@ -169,13 +169,3 @@ $(function(){                       // čaká na DOM
   $overlay.on('click',()=>$overlay.removeClass('show'));
 });
 /* ======================= LIGHT-BOX  (uses jQuery only for class toggle) ====================== */
-
-/* ===== MOBILNÉ MENU ===== */
-$('#mobMenuBtn').on('click', function () {
-  $('#sideNav').toggleClass('show');
-});
-
-// zavrieť po kliku na položku (voliteľné)
-$('#sideNav a').on('click', function () {
-  $('#sideNav').removeClass('show');
-});
